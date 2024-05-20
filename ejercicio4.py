@@ -11,7 +11,7 @@ if root < 0:
     print("La ecuación no tiene soluciones reales.")
 else:
 
-    x1 = (-b + math.sqrt(discriminante)) / (2*a)
-    x2 = (-b - math.sqrt(discriminante)) / (2*a)
+    x1 = (-b + math.sqrt(root)) / (2*a)
+    x2 = (-b - math.sqrt(root)) / (2*a)
     
     print("solución 1 =", x1, "solución 2= ", x2)
