@@ -1,11 +1,8 @@
 def main():
-    w = "hola mundo"
+    cadena = "hola mundo".upper()
+    letras = [letra for letra in cadena]
+    print(letras)
 
-    w = w.upper()
-
-
-    for i in w:
-        print(w)
 
 main()
 

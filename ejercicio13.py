@@ -1,27 +1,9 @@
+def list():
 
-#Creamos lista
-list = ["alejandro","franc","edson","harry","blanca","caro"]
+    lista = ["EUA", "MEXICO", "RUSIA", "ALEMANIA", "JAPON", "FRANCIA", "CANADA", "INGLATERRA", "CHINA", "SINGAPUR"]
 
-#Modificar posición en al lista
-list[2] = "sexon"
+    for i in lista:
 
-#agrega elemento al final
-list.append("enano")
+        print(i)
 
-#agrega elemento donde le digas
-list.insert(6, "Valeria")
-
-#fusiona dos listas
-list.extend(["ana", "ricardo", "jose"])
-
-#para remover elemento de lista, pero indicas que dise
-list.remove("franc")
-
-#elimina el elemento pero muestra cual borraste
-element = list.pop(5)
-print(element)
-
-#Imprimir un elemento de la lista
-print(list[2])
-
-print(list)
+list()
