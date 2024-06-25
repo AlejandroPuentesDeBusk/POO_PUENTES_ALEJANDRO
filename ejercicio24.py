@@ -1,3 +1,5 @@
+import random
+
 class Laptop:
 
     #Método constructor
@@ -12,17 +14,19 @@ class Laptop:
 
         #Método
 
-    def encender():
+    def encender(self):
         
         print("Ya prednio")
 
-    def apagar():
+    def apagar(self):
 
         print("Ya se apago")
 
-    def jugar():
+    def descripcion(self):
 
-        print("Jugando MINECRAFT")
+        print(f"laptop {self.marca}, gráfica {self.grafica} y procesador {self.procesador}")
+
+
 
 
 class Minar:
@@ -33,19 +37,22 @@ class Minar:
         self.laptop = laptop
         self.crypto = crypto
         self.tiempo = tiempo
-        self.laptops = []
         self.gains = gains
 
-    #Metodos
-    def minando(self,laptop):
+        self.uso = random.randint(50,100)
 
-        self.laptops.append(laptop)
-        print(f"Estan minando {self.laptop.marca}, {self.crypto}")
+    #Metodos
+    def uso_grafica(self,laptop):
+
+        print(f"el uso de la gráfica {laptop.grafica} es de {self.uso}%")
+
 
 
     def gains_hora (self):
 
-        print(f"Estas generando {self.gains}, por hora")
+        print(f"Estas generando {self.gains} {self.crypto} por hora")
+
+
 
     def total_gains(self):
 
@@ -65,22 +72,13 @@ laptop_1 = Laptop("I9","RTX 4090", "ASUS")
 laptop_2 = Laptop("Ryzen 9", "Titan RTX", "MIS")
 
 
-mina_1 = Minar("Bitcoin", 10, 0.1,laptop_1)
+mina_1 = Minar("Bitcoin", 15, 0.1,laptop_1)
 mina_2 = Minar("Ethereum",50,0.3,laptop_2)
-
-
-
 
 
 #Uso
 
-
-
-#print(laptop_1.encender, laptop_1.jugar)
-
-#print(laptop_2.encender)
-
-
-
-
-
+laptop_1.descripcion()
+mina_1.gains_hora()
+mina_1.total_gains()
+mina_1.uso_grafica(laptop_1)
