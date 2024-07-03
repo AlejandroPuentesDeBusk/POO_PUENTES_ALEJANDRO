@@ -1,75 +1,54 @@
-class Perro:
 
-    def __init__(self,nombre,raza,edad):
+
+class Laptop:
+
+    #Método constructor
+
+    def __init__(self,procesador, grafica, marca):
+
         #Atributos
-        self.nombre= nombre 
-        self.raza = raza
-        self.edad = edad
 
-    #Métodos
-    def ladrar(self):
+        self.procesador = procesador
+        self.grafica = grafica
+        self.marca = marca
 
-        print("Guau")
+        #Método
 
-
-    def comer(self):
-
-        print("COmiendo... ")
+    def encender(self):
         
+        print("Ya prednio")
 
-    def describir(self):
+    def apagar(self):
 
-        print("Soy un perro llamado", self.nombre, "soy raza", self.raza, "y tengo", self.edad, "años")
+        print("Ya se apago")
 
+    def descripcion(self):
 
-class Dueño:
-
-    def __init__(self,nombre):
-
-        self.nombre = nombre
-        self.perros = []
+        print(f"laptop {self.marca}, gráfica {self.grafica} y procesador {self.procesador}")
 
 
-    def añadir_perro(self, perro):
-        
-        self.perros.append(perro)
-        print(perro.nombre,"añadido a la lista de perros de", self.nombre )
+laptop_1 = Laptop("Intel Xeon", "RTX 2080 TI", "MSI")
+
+laptop_2 = Laptop("AMD RYZEN 9 7950XT", "AMD RADEON 7900 XTX", "RAZER")
 
 
-    def listar_perros(self):
+laptop_1.encender()
+laptop_1.descripcion()
 
-        for perro in self.perros:
-
-            print(perro.nombre)
-
-
-    def pasear_perros(self):
-
-        print(self.nombre, "está paseando a sus perros")
-
-        for perro in self.perros:
-
-            perro.ladrar()
+laptop_2.descripcion()
 
 
 
 
-#Objetos
 
-perro1 = Perro("Firulais","Golden",15)
-perro2 = Perro("Solovino","Husky",10)
 
-dueño = Dueño("Ana")
-dueño.añadir_perro(perro1)
-dueño.añadir_perro(perro2)
 
-dueño.listar_perros()
-dueño.pasear_perros()
 
-#Usaros
 
-#print(perro1.nombre)
-#print(perro2.nombre, perro2.raza)
 
-#perro1.ladrar()
-#perro2.comer()
+
+
+
+
+
+
