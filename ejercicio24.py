@@ -1,3 +1,5 @@
+#Clases y objetos Agregación
+
 import random
 
 class Laptop:
@@ -59,11 +61,6 @@ class Minar:
         time = self.tiempo * self.gains
 
         print(f"Llevas minado {time} {self.crypto}")
-
-
-        
-
-
 
 
 #Objetos
