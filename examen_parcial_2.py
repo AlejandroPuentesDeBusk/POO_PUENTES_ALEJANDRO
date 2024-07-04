@@ -132,10 +132,10 @@ class Sistema:
 
 class Rendimiento:
 
-    def __init__(self,laptop,bateria):
+    def __init__(self,laptop,):
 
         self.laptop = laptop
-        self.bateria = bateria
+        self.bateria = random.randint(70,100)
 
 
     def maximo_rendimiento(self):
@@ -300,7 +300,7 @@ def menu():
 
                         laptop_repuesto_1.formatear()
                 
-            case 6:
+            case 6: 
                     
                     laptop_on = Sistema ("windows", laptop_1)
                     laptop_lin = Sistema ("Linux", laptop_2)
@@ -320,8 +320,8 @@ def menu():
                         print(laptop_lin.iniciar_os())
 
             case 7:
-                    modo_1 = Rendimiento(laptop_1,"95%")
-                    modo_2 = Rendimiento(laptop_2,"88%")
+                    modo_1 = Rendimiento(laptop_1,)
+                    modo_2 = Rendimiento(laptop_2,)
                     
                     print("(1): Modo maximo Rendimiento,     (2): Ahorro de energía")
 
