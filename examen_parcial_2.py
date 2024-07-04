@@ -132,18 +132,21 @@ class Sistema:
 
 class Rendimiento:
 
-    def __init__(self,laptop):
+    def __init__(self,laptop,bateria):
 
         self.laptop = laptop
+        self.bateria = bateria
 
 
     def maximo_rendimiento(self):
 
         print (f"{self.laptop.marca} esta en modo maximo rendimiento")
+        print(f"bateria restante = {self.bateria}")
 
     def ahorro_energia(self):
 
         print(f"{self.laptop.marca} esta en modo ahorro de energía")
+        print(f"bateria restante es = {self.bateria}")
 
 
 class Procesador:
@@ -317,8 +320,8 @@ def menu():
                         print(laptop_lin.iniciar_os())
 
             case 7:
-                    modo_1 = Rendimiento(laptop_1)
-                    modo_2 = Rendimiento(laptop_2)
+                    modo_1 = Rendimiento(laptop_1,"95%")
+                    modo_2 = Rendimiento(laptop_2,"88%")
                     
                     print("(1): Modo maximo Rendimiento,     (2): Ahorro de energía")
 
